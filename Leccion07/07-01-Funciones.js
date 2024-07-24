@@ -4,15 +4,15 @@
 miFuncion(2,6)
 
 //de este modo declaracion de la funcion
-function miFuncion (a,b)/*aqui iran los argumentos y estos pueden ser opcionales si hay mas de uno se usa coma*/
+function miFuncion (a,b)/*aqui iran los parametros y estos pueden ser opcionales si hay mas de uno se usa coma*/
 {
     //propiedad argument para saber cuantos argumentos tiene nuestra funcion
     console.log(arguments.length)//esta propiedaad se usa dentro de la funcion 
     //cuerpo de la funcion
-    console.log("suma "+ (a + b))//por usar el contexto cadena se debe meter en parentecis la exprecion
+    console.log("suma "+ (a + b))//por usar el contexto cadena se debe meter en parentecis la exprecion 
 }
 //llamar la funcion
-miFuncion(5,7);
+miFuncion(5,7);//estos son argumentos
 //esta funcion se puede mandar a llamar antes o despues de definirla a esto se le llama hoisting se puede llamar en cualquier parte del prgrma
 
 //convertir nuestra funcion a texto

@@ -2,6 +2,7 @@
 
 //suma de cada uno de los elementos
 let resultado = sumarTodo( 5, 4, 13, 10, 9); //arreglo de argumentos
+
 console.log(sumarTodo(arguments.length))//cantidad de argumentos
 console.log(resultado)//imprmimos el valor de la variable de resultado 
 

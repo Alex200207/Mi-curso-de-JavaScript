@@ -8,16 +8,6 @@
 //esta funcion no se puede mandar a llamr pues no tiene nombre ni esta asignada a una variable 
 
 
-
-
-
-
-
-
-
-
-
-
 //my practice--------------------------------------------------------------
 
 (function(i,y){

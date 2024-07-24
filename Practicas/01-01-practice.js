@@ -326,3 +326,31 @@ console.log("Objeto original:", persona);
 incrementarEdad(persona);
 console.log("Objeto después de incrementar la edad:", persona);
 //------------------------------------------------------------------------------------------------
+// escribe tu respuesta acá
+
+/*Escribir una función llamada contrasenaValida que reciba un string y retorne true si el string es igual 
+a "2Fj(jjbFsuj" o "eoZiugBf&g9". De lo contrario debe retornar false.*/
+
+function contrasenaValida(validar) {
+  
+  return validar === "2Fj(jjbFsuj" || validar === "eoZiugBf&g9";
+}
+
+console.log(contrasenaValida("2Fj(jjbFsuj")); // true
+console.log(contrasenaValida("eoZiugBf&g9")); // true
+console.log(contrasenaValida("hola")); // false
+console.log(contrasenaValida("")); // false
+
+//-------------------------------------------------------------------
+
+const lq = (a,b) => a + b
+result = lq(2,5)
+console.log(result)
+//---------------------------------------
+
+let x = function(a,b){
+  return a + b;
+}
+resultado = x(5,6)
+console.log(resultado)
+//--------------------------------------------
