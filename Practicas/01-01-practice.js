@@ -268,50 +268,46 @@ Después, usa una función autoejecutable para probar la función calificacion. 
 )();*/
 //----------------------------------------------------------
 
-
 /*Ejercicio 1: Modificar un valor primitivo dentro de una función
 Escribe una función duplicarNumero que tome un número como parámetro y duplique su valor dentro de la función.
  Luego, imprime el valor original y el valor después de llamar a la función.*/
 
- let numero = 5
+let numero = 5;
 
- function duplicarNumero(num){
-    num = num * 2
-    return num
- }
+function duplicarNumero(num) {
+  num = num * 2;
+  return num;
+}
 
- console.log("este es el valor original: " + numero)
- resultado = duplicarNumero(numero);/*pasamos  copia del valor a duplicarNumero*/
- console.log('este es el valor despues de la funcion: ' + resultado)
- //------------------------------------------------------------------------------------------------
+console.log("este es el valor original: " + numero);
+resultado =
+  duplicarNumero(numero); /*pasamos  copia del valor a duplicarNumero*/
+console.log("este es el valor despues de la funcion: " + resultado);
+//------------------------------------------------------------------------------------------------
 
-
-
- /*Ejercicio 2: Cambiar el valor de un booleano dentro de una función
+/*Ejercicio 2: Cambiar el valor de un booleano dentro de una función
 Crea una función cambiarBooleano que tome un booleano como parámetro y lo cambie a su opuesto (es decir, si es true,
  lo convierte en false y viceversa).
  Imprime el valor original y el valor después de llamar a la función.*/
 
- let resultado2 = true;
+let resultado2 = true;
 
- function cambiarBooleano(booleano){
-    return !booleano //diferenciar 
- }
-cambio = cambiarBooleano(resultado2)
- console.log("valor original: " + resultado2)
- console.log("valor despues de la funcion: " + cambio )
+function cambiarBooleano(booleano) {
+  return !booleano; //diferenciar
+}
+cambio = cambiarBooleano(resultado2);
+console.log("valor original: " + resultado2);
+console.log("valor despues de la funcion: " + cambio);
 
-
- /*Ejercicio 1: Modificar propiedades de un objeto dentro de una función
+/*Ejercicio 1: Modificar propiedades de un objeto dentro de una función
 Crea una función incrementarEdad que tome un objeto persona como parámetro y aumente
  en 1 unidad el valor de su propiedad edad.
  Luego, verifica si el objeto original ha sido modificado.*/
 
-
 // Objeto persona con una propiedad edad
 const persona = {
   nombre: "Juan",
-  edad: 30
+  edad: 30,
 };
 
 // Función que incrementa la edad de la persona en 1 unidad
@@ -332,7 +328,6 @@ console.log("Objeto después de incrementar la edad:", persona);
 a "2Fj(jjbFsuj" o "eoZiugBf&g9". De lo contrario debe retornar false.*/
 
 function contrasenaValida(validar) {
-  
   return validar === "2Fj(jjbFsuj" || validar === "eoZiugBf&g9";
 }
 
@@ -343,14 +338,57 @@ console.log(contrasenaValida("")); // false
 
 //-------------------------------------------------------------------
 
-const lq = (a,b) => a + b
-result = lq(2,5)
-console.log(result)
+const lq = (a, b) => a + b;
+result = lq(2, 5);
+console.log(result);
 //---------------------------------------
 
-let x = function(a,b){
+let x = function (a, b) {
   return a + b;
-}
-resultado = x(5,6)
-console.log(resultado)
+};
+resultado = x(5, 6);
+console.log(resultado);
 //--------------------------------------------
+
+/*Escribir una función llamada calcularImpuestos que reciba dos argumentos numéricos: edad e ingresos. 
+Si edad es igual o mayor a 18 y los ingresos son iguales o mayores a 1000 debe retornar ingresos * 40%. 
+De lo contrario retornar 0. */
+
+function calcularImpuestos(edad, ingresos) {
+  if (edad >= 18 && ingresos >= 1000) {
+    return ingresos * 0.4;
+  } else {
+    return 0;
+  }
+}
+
+console.log(calcularImpuestos(18, 2000));
+
+//--------------------------------------------
+
+/*El índice de masa corporal (IMC), o BMI por sus siglas en inglés, es un valor que determina la cantidad de grasa de una persona.
+
+El BMI se calcula con la siguiente formula: peso / altura^2
+
+Escribir una función llamada bmi que reciba dos argumentos: peso y altura, y retorne un string con las siguientes posibilidades:
+
+"Bajo de peso" si el BMI < 18.5
+"Normal" si está entre 18.5 y 24.9
+"Sobrepeso" si está entre 25 y 29.9
+"Obeso" si es igual o mayor a 30 */
+
+function bmi(peso, altura) {
+  const BMI = peso / altura ** 2;
+  if (BMI < 18.5) {
+    return "Bajo de peso";
+  } else if (BMI >= 18.5 && BMI < 24.9) {
+    return " Normal";
+  } else if (BMI >= 25 && BMI < 29.9) {
+    return "Sobrepeso";
+  } else {
+    return "Obeso";
+  }
+}
+
+console.log(bmi(70, 1.75));
+//-------------------------------------------------------------------

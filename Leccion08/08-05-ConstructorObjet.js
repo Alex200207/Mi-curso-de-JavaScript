@@ -15,6 +15,9 @@ function Persona(nombre, apellido, email) {
   //el nombre del parametro es igual al nombre del atributo
   this.apellido = apellido;
   this.email = email;
+  this.nombreCompleto=function(){//agregando metod0
+    return this.nombre + ' ' + this.apellido
+  }
 }
 
 //hemos definido ya una funcion constructor para el objetio de tipo persona
@@ -31,6 +34,7 @@ console.log(madre);
 //podemos cambiar un valor de un objeto asi
 padre.nombre = "eddy";
 console.log(padre);
+console.log(padre.nombreCompleto());//mostrando el metodo del objeto
 
 //my practice --------------------------------------------------
 
@@ -38,6 +42,9 @@ function Telefonos(marca, modelo, color) {
   this.marca = marca;
   this.modelo = modelo;
   this.color = color;
+  this.all = function(){
+    return this.marca + ' ' + this.modelo
+  }
 }
 
 let telefono1 = new Telefonos("samsung", "5d5e5", "black");
@@ -53,4 +60,5 @@ function Laptop(marca, modelo) {
 
 let laptop1 = new Laptop("lenovo", "15arh7");
 console.log(laptop1);
+console.log(telefono1.all())
 //--------------------------------------------

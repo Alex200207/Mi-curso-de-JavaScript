@@ -52,4 +52,10 @@ const expoFunctionArrow = (a,b) => a**b
 resultado = expoFunctionArrow(2,2)
 console.log(resultado)
 
+const Nombre = (nombre) => {
+  nombre = 'eddy' 
+  return nombre.toUpperCase();
+}
+console.log(Nombre())
+
 //------------------------------------------------------------
