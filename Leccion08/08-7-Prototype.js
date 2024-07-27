@@ -16,6 +16,8 @@ function Persona(nombre,edad,apellido){//creado un constructor Persona con 3 pro
 Persona.prototype.telefono = "55225566"//de esta forma agregamos una propiedad telefono  a los obejto de tipo Persona
 //podemos agregar un valor o dejarlo vacio para que se pueda agregar al momento de ingresar datos al objeto
 
+Persona.prototype.loquesea = 'hdhedhdeh'
+
 let padre = new Persona('Wilmer',42,'Hernandez')//agregamos datos a las 3 propiedaes heredadas al objeto
 console.log(padre)
 
