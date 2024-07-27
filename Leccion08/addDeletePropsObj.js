@@ -22,3 +22,4 @@ console.log(person)
 delete person.name;
 
 console.log(person)
+
