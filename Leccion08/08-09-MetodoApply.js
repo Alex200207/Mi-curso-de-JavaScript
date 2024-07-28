@@ -46,4 +46,12 @@ let padre = {
 
 array = ['supervisor', ' 22556688','dudud' ]
 console.log(padre.nombreCompleto1.apply(madre,array))//recordar usar coma y no punto para pasar el arreglo 
+
+let abuelo ={
+    nombre:'samuel',
+    apellido:'wilson'
+}
+
+arreglo = ['jefe','55484884','wtf']
+console.log(padre.nombreCompleto1.apply(abuelo,arreglo))
 //-------------------------------------------------------

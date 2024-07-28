@@ -10,7 +10,7 @@ console.log(resultado);
 //Funciones flechas
 //esta tipo de funcion es muy similar a las funciones de tipo expression
 
-//aremos el ejemplo de funcion de tipo expresion pero usando la funcion tipo flecha 
+//haremos el ejemplo de funcion de tipo expresion pero usando la funcion tipo flecha 
 //usaremos en este caso una constante ya que es mas recomendable
 //asi no cambiar la referencia o valor asiganado a la variable
 //ya no tenemos que usar function , en lugar de abrir y cerrar llaves se usa el operador de flechas =>

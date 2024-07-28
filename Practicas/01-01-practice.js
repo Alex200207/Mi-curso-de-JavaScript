@@ -392,3 +392,47 @@ function bmi(peso, altura) {
 
 console.log(bmi(70, 1.75));
 //-------------------------------------------------------------------
+/*Arrays
+
+Crea un array con los números del 1 al 5 y luego usa un bucle para imprimir cada número en la consola. */
+
+let array = [1, 2, 3];
+
+for (let i = 0; i < array.length; i++) {
+  console.log(i + " : " + array[i]);
+}
+//------------------------------------------------------------------------
+/*Escribe una función que reciba un array de números y devuelva un nuevo array con los números multiplicados por 2. */
+
+
+function arreglo2(array){
+  let count = []
+  for(let i = 0; i < array.length;i++){
+    count.push(array[i] * 2 )
+  }
+  return count
+}
+
+console.log(arreglo2([1,2,3]))
+
+
+
+function divicionArray(arreglo){
+  let divisor = []
+  for(let i = 0; i < arreglo.length;i++){
+    divisor.push(arreglo[i] / 2)
+  }
+  return divisor
+}
+
+console.log(divicionArray([2,5,6]))
+console.log(potenciar([5,6,7]))
+function potenciar(poten){
+  let count = []
+  for(let i =0; i < poten.length;i++){
+    count.push(poten[i] ** 2)
+  }
+  return count
+}
+
+//---------------------------------------------------------------
