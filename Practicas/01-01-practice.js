@@ -404,35 +404,63 @@ for (let i = 0; i < array.length; i++) {
 //------------------------------------------------------------------------
 /*Escribe una función que reciba un array de números y devuelva un nuevo array con los números multiplicados por 2. */
 
-
-function arreglo2(array){
-  let count = []
-  for(let i = 0; i < array.length;i++){
-    count.push(array[i] * 2 )
+function arreglo2(array) {
+  let count = [];
+  for (let i = 0; i < array.length; i++) {
+    count.push(array[i] * 2);
   }
-  return count
+  return count;
 }
 
-console.log(arreglo2([1,2,3]))
+console.log(arreglo2([1, 2, 3]));
+
+//-------------------------------------
 
 
+//codigo a entender
+function multi(arreglo) {
+  let contador = [];
+  for (let i = 0; i < arreglo.length; i++) {
+    contador.push(
+      /*¿Por qué se usa push?
+      Objetivo del push: La función push se utiliza para añadir un nuevo elemento al final de un array. En el contexto de tu función, 
+      contador.push(arreglo[i] * 2) agrega el resultado de arreglo[i] * 2 al array contador.
+      
+      Construcción del Array contador: Si no usas push, no podrías agregar elementos al array contador
+      . El array se mantendría vacío, y al final del bucle, el resultado sería un array vacío. push es 
+      la forma estándar de agregar elementos a un array en JavaScript. */
+      arreglo[i] * 2
+    ); /*Dentro del bucle, se toma el elemento del array arreglo
+     en la posición i, se multiplica por 2, y luego se agrega al final del array contador 
+     usando el método push.
 
-function divicionArray(arreglo){
-  let divisor = []
-  for(let i = 0; i < arreglo.length;i++){
-    divisor.push(arreglo[i] / 2)
+    Por ejemplo, si arreglo es [1, 6, 5, 2], durante la primera iteración (i = 0), arreglo
+    [0] es 1. La expresión arreglo[i] * 2 da como resultado 2, que se añade al array contador. En la siguiente 
+    iteración (i = 1), arreglo[1] es 6, entonces 6 * 2 es 12, y así sucesivamente. */
   }
-  return divisor
+  return contador;
 }
 
-console.log(divicionArray([2,5,6]))
-console.log(potenciar([5,6,7]))
-function potenciar(poten){
-  let count = []
-  for(let i =0; i < poten.length;i++){
-    count.push(poten[i] ** 2)
+console.log(multi([1, 6, 5, 2]));
+
+
+//-----------------------------------------------------------------------------------------------------------------
+function divicionArray(arreglo) {
+  let divisor = [];
+  for (let i = 0; i < arreglo.length; i++) {
+    divisor.push(arreglo[i] / 2);
   }
-  return count
+  return divisor;
+}
+
+console.log(divicionArray([2, 5, 6]));
+console.log(potenciar([5, 6, 7]));
+function potenciar(poten) {
+  let count = [];
+  for (let i = 0; i < poten.length; i++) {
+    count.push(poten[i] ** 2);
+  }
+  return count;
 }
 
 //---------------------------------------------------------------

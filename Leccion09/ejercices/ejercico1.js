@@ -36,6 +36,8 @@ empleado1 = new Empleado('eddy',20,555)
 console.log(empleado1.saludar())
 console.log(empleado1.mostrarSalario())
 //-------------------------------------------------------------------------------------
+
+
 /*Ejercicio 2: Sobrescribir métodos
 Crear una clase Animal:
 
@@ -44,6 +46,31 @@ Debe tener un método hacerSonido que imprima Este animal hace un sonido.
 Crear una clase Perro que herede de Animal:
 
 Debe sobrescribir el método hacerSonido para que imprima El perro ladra. */
+
+class Animal{
+    constructor(nombre){
+        this._nombre = nombre
+    }
+    hacerSonido(){
+        return 'este animal hace un sonido'
+    }
+}
+
+class Perro extends Animal{
+    constructor(nombre){
+        super(nombre)
+    }
+    hacerSonido(){//aqui se sobrescribe el sonido
+        return 'el perro ladra'
+    }
+}
+
+let perro1 = new Perro('salchicha')
+console.log(perro1.hacerSonido())
+console.log(perro1._nombre)
+
+
+
 
 //-----------------------------------------------------------------------------
 /*Ejercicio 3: Añadir propiedades y métodos específicos
