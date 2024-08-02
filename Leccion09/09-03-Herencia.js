@@ -28,6 +28,11 @@ class Persona {
     set setApellido(apellido){
         return this._apellido = apellido
     }
+    //heredear metodos
+    nombreCompleto(){// dentro de una clase no es necesario especificar la palabra reservada function
+        return this._nombre + ' ' + this._apellido
+
+    }
 }
 
 //creamos clase hija
@@ -60,4 +65,5 @@ console.log(empleado1)
 console.log(empleado1.getName)//el metodo get nombre se a heredado a la clase hija
 empleado1.setName = 'luisa'
 console.log(empleado1._nombre)//el metodo set nombre funciona correctamente
+console.log(persona1.nombreCompleto())
 
