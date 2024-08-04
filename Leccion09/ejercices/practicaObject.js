@@ -17,6 +17,9 @@ class Vehiculo {
   toString() {
     return this.date();
   }
+  static corre(vehiculo){
+    console.log('este vehiculo corre a 200km y su marca es: ' + vehiculo)
+  }
 }
 
 class Coche extends Vehiculo {
@@ -35,6 +38,8 @@ console.log(vehiculo1.toString());
 
 let coche1 = new Coche("Land Cruiser", "2002", "diesel");
 console.log(coche1.toString());
+
+Vehiculo.corre(vehiculo1)
 
 
 /*Ejercicio 2: Implementar polimorfismo con métodos comunes
@@ -79,6 +84,7 @@ let gato = new Gato();
 console.log(hacerSonidoAnimal(perro)); 
 console.log(hacerSonidoAnimal(gato));  
 console.log(hacerSonidoAnimal(pollo))
+
 
 /*El polimorfismo es un concepto en la programación que permite que una función o método haga cosas diferentes según
  el tipo de objeto que reciba.

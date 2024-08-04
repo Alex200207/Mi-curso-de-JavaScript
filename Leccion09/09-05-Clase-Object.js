@@ -73,7 +73,7 @@ es sobreescribir el comportamiento del metodo toString heredado de clase Object.
 
 /*el metodo empleado manda a llamar el metodo toString y el metodo toString esta mandando a llamar el metodo nombreCompleto 
 que metodo se ejecuta?? el metodo nombreCompleto de la clase hija? o el metodo nombreCompleto de la clase padre bueno
-debido a que estamos imprimiendo de manera automaitca el departamento esto implica que se esta mandando a llamar el metodo
+debido a que estamos imprimiendo de manera automatica el departamento esto implica que se esta mandando a llamar el metodo
 definido en la clase hija a esto se le conoce como polimorfismo */
 
 console.log(empleado1.toString())
