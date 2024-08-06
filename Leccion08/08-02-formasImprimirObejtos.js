@@ -16,6 +16,7 @@ for(nameProps in person){
     console.log(person[nameProps])
 }
 
+
 //utilizando el metodo Objet.values() que regresa un arreglo con las propiedades de nuestro objeto
 let personArray = Object.values(person);
 console.log(personArray)

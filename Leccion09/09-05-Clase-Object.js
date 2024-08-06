@@ -43,9 +43,10 @@ class Persona {
 }
 
 class Empleado extends Persona{
-    constructor(nombre,apellido,departamento){
+    constructor(nombre,apellido,departamento,ubicacion){
         super(nombre,apellido)
         this._departamento = departamento
+        this._ubicacion = ubicacion
 
     }
     get departamento(){
@@ -56,14 +57,14 @@ class Empleado extends Persona{
     }
     
     nombreCompleto(){
-        return super.nombreCompleto() + ' ' + this._departamento
+        return super.nombreCompleto() + ' ' + this._departamento+ ' ' +this._ubicacion
 
     }
 
 }
 
 //creamos objeto y probamos
-let empleado1 = new Empleado('eddy','talvera','sistemas')
+let empleado1 = new Empleado('eddy','talvera','sistemas','jalapa')
 console.log(empleado1)
 console.log(empleado1.nombreCompleto())
 

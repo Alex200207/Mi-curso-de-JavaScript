@@ -17,5 +17,11 @@ console.log(j);
 validacion = 5
 let i = validacion >= 8 ? 'true':'false';
 console.log(i)
+
+
+
+j = edad >= 15 ? 'true':'false';
+console.log(j)
+
 //------------------------------------------------------------------------------------
 
