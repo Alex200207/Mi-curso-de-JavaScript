@@ -28,7 +28,7 @@ class Producto{
     toString(){
         return `idProducto: ${this._idProducto} ,nombre: ${this._nombre} ,precio: ${this._precio}`;
     }
-
+    
 }
 
 //creamos la clase orden con una relacion de agregacion
@@ -40,7 +40,7 @@ class Orden{
     constructor(){
         this._idOrden = ++Orden.contadorOrdenes;//
         this._productos = [];//creamos un atributos que es un arreglo vacio
-        this._contadorProductosAgregados = 0;//crear variable contador productos agregados para saber cuantos productos agregados al arreglo
+        //this._contadorProductosAgregados = 0;//crear variable contador productos agregados para saber cuantos productos agregados al arreglo
     }
 
     get idOrden(){
@@ -48,7 +48,8 @@ class Orden{
     }
 
     agregarProducto(producto){
-        if(this._productos.length < MAX_PRODUCTOS){
+        
+        if(this._productos.length < Orden.MAX_PRODUCTOS){
             this._productos.push(producto)
             //this._productos[this._contadorProductosAgregados++] = producto;
         }else{
@@ -76,20 +77,29 @@ class Orden{
     mostraOrden(){
         let productoOrden = '';
         for(let producto of this._productos){//iterar cada uno de los productos en nuestro arreglo
-            productoOrden += producto.toString() + ' ';
+            productoOrden += '\n{' + producto.toString() + '}';
         }
 
-        console.log(`Orden: ${this.idOrden} Total: ${this.calcularTotal()}, productos: ${productoOrden}`)
+        console.log(`Orden: ${this.idOrden} Total: $${this.calcularTotal()}, productos: $${productoOrden}`)
     }
 
 }
 
 
 
-//creamos algunos objetos
+//creamos algunos objetos productos
 let producto1 = new Producto('camisa',200)
 let producto2 = new Producto('pantalon',200)
+let producto3 = new Producto('laptop',50000)
 
-//imprimimos los objetos usando el metodo toString
-console.log(producto1.toString())
-console.log(producto2.toString())
+//crear objeto de tipo orden  ordenes
+
+let orden1 = new Orden()
+orden1.agregarProducto(producto1)
+
+orden1.agregarProducto(producto2)
+let orden2 = new Orden()
+orden2.agregarProducto(producto3)
+
+orden1.mostraOrden();
+orden2.mostraOrden()
