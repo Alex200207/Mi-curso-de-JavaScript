@@ -9,7 +9,7 @@ se va ejecutar de manera secuencial es decir primero la funcion1 y luego la dos 
 
 
 //funciones de tipo callback
-
+//creamos una funcion que inprime un mensaje
 let imp = function imprir(mensaje){
     console.log(mensaje)
 }
@@ -17,7 +17,7 @@ let imp = function imprir(mensaje){
 
 //declar otra funcion que va utilizar la funcion anterior
 function sumar (op1,op2, funcionCallback){//pasamos la funcion con los otros parametros al ser parametro tendra cualquier nombre
-    let res = op1 + op2;
+    let res = op1 + op2;//craemos una variable res que tendra el resultado de la suma
     funcionCallback(`Resultado: ${res}`)//uso de template strings mandamos a llamar la funcion y pasamos la respuesta de la suma
 
 }
