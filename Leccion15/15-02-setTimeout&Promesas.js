@@ -1,0 +1,1 @@
+//Funcion setTimeout y promesas en javascript

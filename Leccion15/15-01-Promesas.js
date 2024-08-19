@@ -44,3 +44,46 @@ miPromesa
 
 //este es el principio de concepto de promesas en javascript
 //A practicar!!!!!
+
+
+//-------------------------------------------------------------------------------------------------------------------
+
+//practice
+/*Crea dos promesas que resuelvan después de diferentes tiempos. Usa Promise.all para esperar a que ambas promesas se resuelvan y luego imprime
+ un mensaje cuando ambas hayan terminado. */
+
+
+// Creación de la primera promesa
+let promesa1 = new Promise((resolve, reject) => {
+    // setTimeout simula una operación asincrónica que toma 2 segundos
+    setTimeout(() => {
+        // Cuando la operación se completa, llamamos a resolve
+        resolve("Promesa 1 resuelta"); // Indica que la promesa se ha resuelto exitosamente
+    }, 2000); // Tiempo en milisegundos
+});
+
+// Creación de la segunda promesa
+let promesa2 = new Promise((resolve, reject) => {
+    // setTimeout simula una operación asincrónica que toma 4 segundos
+    setTimeout(() => {
+        // Cuando la operación se completa, llamamos a resolve
+        resolve("Promesa 2 resuelta"); // Indica que la promesa se ha resuelto exitosamente
+    }, 4000); // Tiempo en milisegundos
+});
+
+// Promise.all recibe un array de promesas y espera a que todas se resuelvan
+Promise.all([promesa1, promesa2])
+    .then(resultados => {
+        // Este código se ejecuta cuando todas las promesas se han resuelto
+        console.log("Ambas promesas resueltas:", resultados); 
+        // 'resultados' es un array que contiene los valores resueltos de ambas promesas
+    })
+    .catch(error => {
+        // Si alguna de las promesas es rechazada, este código se ejecuta
+        console.log(error); // Imprime el error
+    });
+
+// Resumen: El código simula dos operaciones asincrónicas que se resuelven en diferentes momentos.
+// Utiliza Promise.all para esperar a que ambas se completen antes de proceder.
+
+
