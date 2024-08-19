@@ -27,3 +27,13 @@ while(count <= 5)
 }
 console.log("fin de esta vaina")
 //-----------------------------------------------------------------------
+
+//ciclo while infinitp
+
+
+let contador3 = 0
+
+while(contador >= 0){
+  console.log(contador)
+  contador++;
+}

@@ -50,3 +50,23 @@ switch(numeroDeDia)
 }
 console.log(Dia)
 //-----------------------------------------------
+
+//menu de preguntas usando funciones flechas y funcion callback , setTimeout
+
+const imprimir = (mensaje) => console.log(mensaje)
+
+const menu = (opcion,mensajes) => {
+    switch(opcion){
+        case 1:
+            return mensajes(`que tal te va`)
+        case 2:
+            return mensajes('donde estas')
+        case 3:
+            return mensajes('que haces')
+        default:
+            return 'la opcion elejida no existe' 
+    }
+
+} 
+
+setTimeout(() => menu(3,imprimir),3000)

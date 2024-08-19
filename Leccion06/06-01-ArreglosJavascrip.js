@@ -52,3 +52,9 @@ for(l =0; l < autos.length;l++)
 
 //recorrimos lo elemenos y mostramos su indice y elemento usando el ciclo for
 //-------------------------------------------------------------------------------------------------
+
+arreglo = [1,2,4,5,6,7,8,9,10]
+
+for(let x = 0;x < arreglo.length; x++){
+    console.log(x + ':' + arreglo[x])
+}

@@ -17,3 +17,9 @@ for(let numeros = 0 ;numeros < 5;numeros++){
 }
 console.log('fin de este ciclo')
 //-----------------------------------------------------------------------
+
+//ciclo for infinito
+
+for (let contador = 0; contador >= 0; contador++) {
+  console.log(`Bucle infinito: ${contador}`);
+}
