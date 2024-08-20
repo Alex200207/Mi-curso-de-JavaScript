@@ -1,5 +1,9 @@
 //funciones setTimeout en Javascript
 
+/*setTimeout en JavaScript es una función que se usa para 
+ejecutar un pedazo de código o una función después de un cierto periodo de tiempo,
+ medido en milisegundos. Básicamente, le dices a JavaScript: "Espera un tiempo específico y luego haz esto */
+
 
 let imp = function imprir(mensaje){
     console.log(mensaje)

@@ -16,3 +16,17 @@ miFunction().then(valor => console.log(valor))// se consume igual sin embargo se
 
 /*entonces podemos convertir una funcion a promesa y lo que retorne lo podemos consumir
 con la funcion .then()*/
+
+
+ //----------------------------------------------------------practice
+
+ async function nueva() {
+    return 'esta es otra prueba de async en funciones'
+ }
+
+ nueva().then((valor) => console.log(valor))
+
+ async function nueva2(){
+    return 'esta es otra prueba de async en funciones'
+ }
+ nueva().then((valor) => console.log(valor))
