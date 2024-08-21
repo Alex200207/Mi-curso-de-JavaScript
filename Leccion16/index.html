@@ -8,10 +8,20 @@
     <title>DOM</title>
 </head>
 <body>
-    <h1>Ejemplo del DOM con js</h1>
-    <p>Saludos!</p>
-    <script>
+    <h1 id="h1">Ejemplo del DOM con js</h1> <!-- asignamos una id al elemento -->
+    <p id="p">Saludos!</p>
+    <script>//los scrpt debe estar despues de los elementos html
+    //acceder a los elementos del DOM
+    let h1 = document.getElementById('h1').innerHTML;// de esta forma se accede a un elemento del DOM
+    //con innerHTML se accede al contenido del elemento
+    //usando el metodo getElementById 
+    /*todo los elementos del dom son objetos por lo tanto tienen atributos y metodos */
+
+    let p = document.getElementById('p').innerHTML;//de esta forma se accede al texto del parrafo
+        console.log(`El contenido del h1 es: ${h1}`); //mostramos el contenido del h1
+        console.log(`El contenido del p es: ${p}`); //mostramos el contenido del p
         console.log('saludos desde js')
     </script>
 </body>
 </html>
+
