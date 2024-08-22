@@ -1,0 +1,34 @@
+<!-- funcion querySelectorAll() en JavaScript  -->
+
+ <!-- La función querySelectorAll() en JavaScript es
+
+un método que se utiliza para seleccionar múltiples elementos en un documento HTML utilizando selectores CSS.
+Este método devuelve una lista de todos los elementos que coinciden con el selector especificado. Puedes utilizar
+cualquier selector CSS válido, como un nombre de 
+etiqueta, una clase, un ID o incluso un selector de atributo. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+     <style>
+        .azul{
+            color:blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+<body>
+    <h1 class="azul">titulo</h1>
+    <p class="azul">parrafo 1</p>
+    <p class="azul">parrafo 2</p>
+    <script>
+        let elementos = document.querySelectorAll('p.azul')//recupera los elementos especificados con la clase azul        
+        console.log(`No. elementos: ${elementos.length}`)
+        for(let elemento of elementos){
+            console.log(`Recorriendo elementos: ${elemento.innerHTML}`)
+        }
+    </script>
+</body>
+</html>
