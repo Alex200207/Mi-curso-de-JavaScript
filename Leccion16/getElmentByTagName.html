@@ -1,0 +1,33 @@
+
+<!-- metodo getElementsByTagName  -->
+
+<!--
+    Método: getElementsByTagName
+    Descripción: Este método devuelve una colección de todos los elementos en el documento con el nombre de etiqueta especificado.
+    Parámetros: Ninguno
+    Valor de retorno: Una colección de elementos con el nombre de etiqueta especificado.
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementTagName</title>
+</head>
+<body>
+    <h1 id="h1">esto es una prueba</h1><!-- no necesitas agergar un id solo usamos el nombre de la etiqueta -->
+    <p id="p1">saludos</p>
+    <p id="p2">parrafo </p>
+
+<script>
+    let parrafos = document.getElementsByTagName('p');//accedemos a los elementos de tipo parrafo se almacenan en un array de objetos
+    console.log(`No.parrafos: ${parrafos.length}`);//mostramos los elementos de tipo parrafo usando el metodo length para contar los elementos
+    for(let i = 0; i < parrafos.length; i++){
+        console.log(`Recorriendo parrafo ${i + ': '}${parrafos[i].innerHTML}`)//rrcorremos los elementos de tipo parrafo y mostramos su contenido
+        //con un ciclo for
+    }
+    //todos los elementos del dom son objetos por lo tanto tienen atributos y metodos
+    //ciclo for para recorrer los elementos de tipo parrafo
+</script>
+</body>
+</html>

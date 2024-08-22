@@ -10,17 +10,25 @@
 <body>
     <h1 id="h1">Ejemplo del DOM con js</h1> <!-- asignamos una id al elemento -->
     <p id="p">Saludos!</p>
+    <h2 id="h2">otro ejemplo de elementos de js</h2>
     <script>//los scrpt debe estar despues de los elementos html
     //acceder a los elementos del DOM
-    let h1 = document.getElementById('h1').innerHTML;// de esta forma se accede a un elemento del DOM
-    //con innerHTML se accede al contenido del elemento
+    let h1 = document.getElementById('h1');// de esta forma se accede a un elemento del DOM
+    let h2 = document.getElementById('h2')
     //usando el metodo getElementById 
     /*todo los elementos del dom son objetos por lo tanto tienen atributos y metodos */
+    let p = document.getElementById('p');//de esta forma se accede al texto del parrafo
 
-    let p = document.getElementById('p').innerHTML;//de esta forma se accede al texto del parrafo
-        console.log(`El contenido del h1 es: ${h1}`); //mostramos el contenido del h1
-        console.log(`El contenido del p es: ${p}`); //mostramos el contenido del p
-        console.log('saludos desde js')
+    //con innerHTML se accede al contenido del elemento
+        console.log(`El contenido del h1 es: ${h1.innerHTML}`); //mostramos el contenido del h1
+        console.log(`El contenido del p es: ${p.innerHTML}`); //mostramos el contenido del p
+        console.log(`El contenido del h2: ${h2.innerHTML}`);
+
+
+        //modificar el contenido de un elemento
+        p.innerHTML = 'Nuevo contenido'; //modificamos el contenido del p con el metodo innerHTML
+        h1.innerHTML = 'cambio del h1'; //modificamos el contenido del h1 con el metodo innerHTML
+        h2.innerHTML ='cambio del h2';
     </script>
 </body>
 </html>
