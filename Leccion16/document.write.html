@@ -1,0 +1,39 @@
+<!-- Uso de document.write() con JavaScript  --> 
+ <!-- formas para modificar los valore de nuestros documentos html -->
+  <!-- document.write es un método en JavaScript que permite escribir contenido directamente en el flujo del documento HTML. 
+   Cuando se llama a document.write, el contenido especificado se inserta en el lugar donde se encuentra el script en el 
+   documento HTML. -->
+
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document.write</title>
+ </head>
+ <body>
+   <h1 id="titulo">Manejo DOM con JavaScript</h1>
+   <button onclick="mostrar()">Mostrar</button>
+   <button onclick="sumar(5,8)">Sumar</button>
+   <button onclick="modificar()">modificar</button>
+     <script>
+        document.write('<h1>Este es un encabezado</h1>');//escribimos un encabezado en el documento 
+        //vaciando informacion directamente en el flujo del documento html.
+        //esto sobreescribe el contenido del documento hay que tener cuidado con su uso
+        const mostrar = () => {
+            document.write('<p>Este es un parrafo</p>');//escribimos un parrafo en el documento
+        } //cuando volvemos a cargar la pagina se sobreescribe el contenido
+
+        const sumar = (a,b) => {
+            document.write(`<p>la suma de ${a} mas ${b} es: ${a + b}</p>`);//escribimos la suma de dos numeros
+        }
+
+        //modificar el contenido de un elemento
+        const modificar = () =>{
+            document.getElementById('titulo').innerHTML += '<br>Nuevo titulo';
+            //modificamos el contenido del h1 con la propiedad innerHTML y usando el operador += para concatenar el contenido del h1
+            // funcion += es igual a titulo.innerHTML = titulo.innerHTML + '<br>Nuevo titulo'
+        }
+     </script>
+ </body>
+ </html>

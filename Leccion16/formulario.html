@@ -19,9 +19,17 @@
         const mostrarValores =()=>{
             let formulario = document.forms['formulario']//accedemos al formulario con el metodo forms dentro de un array de objetos
             let texto ='';//creamos una variable texto donde se almacenara el contenido del formulario
-            for(let elemento of formulario){
-                texto += elemento.value + '<br>';//almacenamos el contenido del formulario en la variable texto
+//acediendo a los elementos del formulario de manera individual
+//let nombre = formulario['nombre'];
+//imprimer el elemento completo
+//console.log(nombre);
+//acceder a los valores
+//texto = nombre.value; recuperando el valor de juan
+            for(let elemento of formulario){//recorremos los elementos del formulario
+
+                texto += elemento.value + '<br>';//almacenamos el contenido del formulario en la variable texto usando el metodo value para acceder al contenido
             }
+            //el operador += se utiliza para concatenar cadenas de texto y es igual a texto = texto + elemento.value + '<br>'
             document.getElementById('valores').innerHTML =  texto;//mostramos el contenido del formulario en el div con id valores
         }
     </script>

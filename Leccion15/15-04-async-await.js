@@ -29,7 +29,7 @@ async function funcionConPromesa2(){
     let miPromesa2 = new Promise((resolve) => {
         resolve('promesa cumplida con await')
     })
-    console,log(await miPromesa2)
+    console.log(await miPromesa2)
 }
 
 //ejercicos de practica-----------------------------------------------------------------------------------------------
