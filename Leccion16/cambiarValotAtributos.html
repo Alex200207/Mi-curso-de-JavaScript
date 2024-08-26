@@ -1,0 +1,22 @@
+<!-- cambio del valor de atributos HTML con JavaScript -->
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 id="titulo">Manejo del dom con javascript</h1>
+    <button onclick="show()">Mostrar</button>
+    <br/>
+    <img src="http://globalmentoring.com.mx/imagenes/javascript.png" alt="" id="imagen">
+    <script>
+        const show = () =>{
+            document.getElementById('imagen').src = 'http://globalmentoring.com.mx/imagenes/html5.png';//cambiamos la imagen por otra imagen
+            //usamos el metodo src para cambiar la imagen
+        }
+    </script>
+    
+ </body>
+ </html>

@@ -16,6 +16,7 @@ for(let i = 0; i < autos.length; i++){
     console.log(i + ' : ' + autos[i])//imprimimps cada uno de los elementos utilizando nuestra variable de incremento
 }
 
+
 autos[1] = "MercedesBenz"//modificar un valor del indixe se ingresa el indice  a modificar y se indica el valor
 console.log(autos)
 

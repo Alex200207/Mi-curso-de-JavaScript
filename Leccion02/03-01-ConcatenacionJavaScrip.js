@@ -8,7 +8,7 @@ console.log(nombre_completo)
 
 
 //segunda forma de concatenar
-var nombre_completo2 = 'carlos' + " " + "lara"
+var nombre_completo2 = `carlos lara`
 console.log(nombre_completo2)
 
 //en js se evalua de izquierda a derecha y como 

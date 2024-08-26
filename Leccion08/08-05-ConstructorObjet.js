@@ -17,6 +17,7 @@ function Persona(nombre, apellido, email) {
   this.email = email;
   this.nombreCompleto=function(){//agregando metod0
     return this.nombre + ' ' + this.apellido
+    //THIS es una palabra reservada que hace referencia al objeto actual
   }
 }
 

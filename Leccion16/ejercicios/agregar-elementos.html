@@ -1,0 +1,40 @@
+<!-- agregar un nuevo elemento a la lista -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Lista de Tareas</h2>
+    <ul id="listaTareas">
+      <li>Tarea 1</li>
+      <li>Tarea 2</li>
+    </ul>
+
+    <button id="agregarTareaBtn">Agregar Tarea</button>
+
+    <script>
+      // Seleccionar el botón y la lista
+      const agregarTareaBtn = document.getElementById("agregarTareaBtn");
+      const listaTareas = document.getElementById("listaTareas");
+
+      // Función para agregar un nuevo elemento a la lista
+      function agregarTarea() {
+        // Crear un nuevo elemento <li>
+        const nuevaTarea = document.createElement("li");
+
+        // Asignar contenido de texto al nuevo elemento
+        nuevaTarea.textContent = `Tarea ${listaTareas.children.length + 1}`;
+
+        // Agregar el nuevo <li> a la lista <ul>
+        listaTareas.appendChild(nuevaTarea);
+      }
+
+      // Asignar un evento al botón para que agregue una tarea al hacer clic
+      agregarTareaBtn.addEventListener("click", agregarTarea);
+    </script>
+  </body>
+</html>

@@ -75,4 +75,23 @@ let madre = {
 paso = padre.nombreCompleto.call(madre);
 console.log(paso);
 
-//-------------------------------------------------------------
+//--------------------------------------------------------
+
+let objeto = {
+  nombre : 'lo q sea',
+  apellido :'wtf',
+  nombreCompleto:function(){
+    return this.nombre +' '  +  this.apellido + ' ' +  this.edad
+  }
+}
+
+
+let objeto2 = {
+  nombre:'lo q sea2',
+  apellido:'wtf2',
+  edad : 55
+}
+
+paso = objeto.nombreCompleto.call(objeto2)
+
+console.log(paso)

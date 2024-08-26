@@ -32,4 +32,15 @@ incluso una ves terminados la ejecucion de la funcion que realizo los cambiso al
 //practice -------------------------------------------------------------------------
 
 
+const auto = {
+    marca:'Toyota',
+    modelo:'Corolla'
+}
 
+const cambiarValoresAuto = (p1) => {
+    p1.marca = 'Ford'
+    p1.modelo = 'Fiesta'
+}
+
+cambiarValoresAuto(auto)
+console.log(auto)

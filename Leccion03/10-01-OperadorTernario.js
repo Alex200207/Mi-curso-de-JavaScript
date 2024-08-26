@@ -25,3 +25,9 @@ console.log(j)
 
 //------------------------------------------------------------------------------------
 
+const result2 = 5;
+
+resultado = result2 % 2 == 0 ? "verdadero" : "falso";
+console.log(resultado);
+
+

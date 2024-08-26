@@ -1,0 +1,23 @@
+<!-- Seleccionar un elemento y cambiar su contenido -->
+ <!DOCTYPE html>
+ <html lang="es">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <button onclick="eliminar()">Eliminar</button>
+    <div id="miDiv">Este es un div</div>
+    <!--  Cambiar el estilo de un elemento -->
+    <script>
+        const miDiv = document.getElementById('miDiv');//accedemos al div con el id miDiv
+        miDiv.innerHTML = 'Este es un nuevo contenido';//modificamos el contenido del div
+        miDiv.style.color = 'red';
+
+        const eliminar = () =>{
+            miDiv.remove();//eliminamos el div
+        }
+    </script>
+ </body>
+ </html>

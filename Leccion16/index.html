@@ -11,18 +11,21 @@
     <h1 id="h1">Ejemplo del DOM con js</h1> <!-- asignamos una id al elemento -->
     <p id="p">Saludos!</p>
     <h2 id="h2">otro ejemplo de elementos de js</h2>
+    <h3 id="h3">otro ejemplo</h3>
     <script>//los scrpt debe estar despues de los elementos html
     //acceder a los elementos del DOM
     let h1 = document.getElementById('h1');// de esta forma se accede a un elemento del DOM
     let h2 = document.getElementById('h2')
+    let h3 = document.getElementById('h3')
     //usando el metodo getElementById 
     /*todo los elementos del dom son objetos por lo tanto tienen atributos y metodos */
     let p = document.getElementById('p');//de esta forma se accede al texto del parrafo
 
-    //con innerHTML se accede al contenido del elemento
+    //con innerHTML se accede al contenido del elemento y este es un atributo de los elementos del DOM
         console.log(`El contenido del h1 es: ${h1.innerHTML}`); //mostramos el contenido del h1
         console.log(`El contenido del p es: ${p.innerHTML}`); //mostramos el contenido del p
         console.log(`El contenido del h2: ${h2.innerHTML}`);
+        console.log(`El contenido del h3: ${h3.innerHTML}`);
 
 
         //modificar el contenido de un elemento

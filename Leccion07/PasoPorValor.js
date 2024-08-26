@@ -11,7 +11,8 @@ let x = 10;//valor primitivo
 //creamos un metodo para cambiar el valor desde el metodo
 //esto se conoce como paso por valor es pasar una copia del valor al metodo que se va mandar a llamar
 function cambiarValor(a){
-    a 
+    a = 5
+    console.log(a)
 }
 //paso por valor
 cambiarValor(x)//10 pasamos el valor de 10

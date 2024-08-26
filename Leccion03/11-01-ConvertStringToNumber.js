@@ -7,7 +7,7 @@ let minumber = "18r";
 
 let edad = Number(minumber); //Number() Permite convertir un string a numero
 //console.log(typeof edad)
-console.log(edad);
+console.log(edad);//NaN
 
 //----------------------------------------------------------------------------
 //NaN = not a number es un valor
