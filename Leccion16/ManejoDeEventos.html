@@ -1,0 +1,31 @@
+<!-- manejo de eventos con DOM y JavaScript 
+ 
+dependiendo del elemento html que se este usando podemos ocupar un evento distinto
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de eventos</title>
+</head>
+<body>
+    <h1 onclick="this.innerHTML = 'nuevo titulo '">Mostrar</h1> 
+        <!-- podemos introducir codigo directamente en el elemento usando el evento con this apuntamos al h1
+          y innerHTML permite modificar su contenido esta forma de codigo directo no es muy comun y no es una
+          buena practica lo mejor sera usar una funcion-->
+
+    <h2 onclick="cambiarTexto(this)">Manejo del DOM 2</h2>
+    <!-- creamos una etiqueta que recibe la funcion CambiarTextro le pasamos this haciendo referencia al h1 -->
+
+
+    <script>
+        
+        const cambiarTexto = (titulo) => {//creamos la funcion se le pasa un parametro con cualquier nombre y cambiamos su titulo
+            console.log(titulo)
+            titulo.innerHTML = 'cambiamos el titulo';
+        }
+    </script>
+</body>
+</html>

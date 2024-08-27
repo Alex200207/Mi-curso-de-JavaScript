@@ -1,0 +1,27 @@
+<!-- asociar eventos a elementos del DOM -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="titulo">Manejo del DOM</h1>
+    <br>
+    <div id="mostrar"></div>
+    <script>
+        //usando funciones para asociar eventos a elementos del DOM 
+        //funciones de tipo callback
+        const cambiarTexto = () => {//creamos la funcion cambiarTexto que cambia el contenido del h1 por un nuevo titulo 
+            document.getElementById('mostrar').innerHTML += '<br/>Nuevo titulo';
+        }
+
+        document.getElementById('titulo').onclick = cambiarTexto;//asignamos el evento onclick al h1 y le pasamos la funcion cambiarTexto 
+
+    </script>
+    
+</body>
+</html>
