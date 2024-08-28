@@ -1,0 +1,36 @@
+<!--Manejo del evento onchange en js -->
+<!-- El evento onchange es un evento en JavaScript que se dispara cuando el valor de un 
+ elemento de formulario cambia y se pierde el foco. Este evento es comúnmente utilizado 
+ en elementos de formulario como <input>, <select> y <textarea>.
+
+Cuando el usuario interactúa con un elemento de formulario y cambia su valor, el evento
+ onchange se activa. Esto puede ocurrir cuando el usuario selecciona una opción diferente
+  en un menú desplegable, escribe texto en un campo de entrada o cambia el contenido de un 
+  área de texto.
+  
+-o cuando el usuario modifica los valores de un campo de texto-->
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento onchange</title>
+  </head>
+  <body>
+    <h1 id="titulo">manejo del dom</h1>
+    <br>
+    Nombre: <input type="text" name=""  onchange="convertir(this)"/>
+    Apellido : <input type="text" onchange="convertir2(this)" >
+    <script>
+        const convertir = (nombreInput) => {//creamos la funcion convertir que recibe un parametro nombreInput
+            nombreInput.value = nombreInput.value.toUpperCase();//convertimos el contenido del input a mayusculas
+        }
+
+        const convertir2 = (apellidoInput) =>{
+            apellidoInput.value = apellidoInput.value.toUpperCase();//convertimos el contenido del input a mayusculas
+        }
+    </script>
+  </body>
+  </html>

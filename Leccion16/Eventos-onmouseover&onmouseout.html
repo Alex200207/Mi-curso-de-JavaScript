@@ -1,0 +1,33 @@
+<!-- Los eventos onmouseover y onmouseout son eventos de JavaScript que se utilizan para detectar cuando el 
+ cursor del mouse se mueve sobre un elemento HTML o se aleja de él, respectivamente.
+
+El evento onmouseover se activa cuando el cursor del mouse se coloca sobre un elemento HTML. 
+Puedes usar este evento para realizar acciones cuando el usuario pasa el mouse sobre un elemento, 
+como cambiar el color de fondo, mostrar información adicional o activar una animación.
+
+El evento onmouseout se activa cuando el cursor del mouse se aleja de un elemento HTML. 
+Puedes utilizar este evento para realizar acciones cuando el usuario deja de pasar el
+ mouse sobre un elemento, como restaurar el estado original del elemento o ocultar información adicional. -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos onmouseover y onmouseout</title>
+ </head>
+ <body>
+    <h1 id="titulo" onmouseover="rojo(this)" onmouseout="azul(this)">Manejo Dom</h1>
+    <!-- hay que usar this para pasar la referencia del elmento a la funcion -->
+
+    <script>
+        const rojo = (titulo) =>{//creamos la funcion rojo que recibe un parametro titulo 
+            titulo.style.color = 'red';//cambiamos el color del texto a rojo
+        }
+
+        const azul = (titulo) =>{//creamos la funcion azul que recibe un parametro titulo
+            titulo.style.color = 'blue';//cambiamos el color del texto a azul
+        }
+    </script>
+ </body>
+ </html>
