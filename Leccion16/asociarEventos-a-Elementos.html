@@ -12,6 +12,10 @@
     <h1 id="titulo">Manejo del DOM</h1>
     <br>
     <div id="mostrar"></div>
+
+    <h2 id="titulo2">Otro</h2>
+    <br>
+    <div id="mostrar2"></div>
     <script>
         //usando funciones para asociar eventos a elementos del DOM 
         //funciones de tipo callback
@@ -20,6 +24,14 @@
         }
 
         document.getElementById('titulo').onclick = cambiarTexto;//asignamos el evento onclick al h1 y le pasamos la funcion cambiarTexto 
+
+
+        const cambiarTexto2 = () => {
+            document.getElementById('mostrar2').innerHTML += '<br/>Otro titulo';
+        }
+
+        document.getElementById('titulo2').onclick = cambiarTexto2;//asignamos el evento onclick al h2 y le pasamos la funcion cambiarTexto2
+
 
     </script>
     

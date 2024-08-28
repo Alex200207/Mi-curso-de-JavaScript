@@ -1,0 +1,39 @@
+<!-- Manejo del evento onload en Javascript -->
+<!-- El evento onload es un evento que se dispara cuando se completa la carga de una página web. Puedes utilizarlo para ejecutar 
+ código JavaScript una vez que todos los elementos de la página se hayan cargado correctamente. -->
+
+ <!-- sirve para las cookies Las cookies son pequeños archivos de texto que se almacenan en el navegador web del usuario. Son utilizadas
+   para almacenar información específica del usuario
+  , como preferencias, datos de inicio de sesión, historial de navegación, entre otros. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="entrar()"><!--usamos el evento onload para mostrar una alert al cargar -->
+    <h1 id="titulo">Manejo del DOM</h1>
+    <br>
+    <div id="mostrar"></div>
+
+    <script>
+        const entrar = () => {//usaremos para mostrar una alert al cargar la pagina
+            alert('Bienvenido a la página');
+            let texto = '';//creamos una variable texto
+            if(navigator.cookieEnabled){//verificamos si las cookies estan habilitadas
+                //navigator es un objeto incorporado en JavaScript que proporciona información sobre el navegador del usuario
+                texto = 'Las cookies están habilitadas';//si estan habilitadas mostramos un mensaje
+        }else{
+            texto = 'Las cookies no están habilitadas';
+        }
+        document.getElementById('mostrar').innerHTML = texto;//mostramos el mensaje en el div con id mostrar
+    }
+
+    //las cookis se almacenaran en el navegador del usuario y se pueden utilizar para almacenar información específica del usuario
+    //como preferencias, datos de inicio de sesión, historial de navegación, entre otros.
+    //las cookies se pueden crear, leer y eliminar utilizando JavaScript
+    //se alamacenan como clave-valor y se pueden configurar con una fecha de expiración
+    </script>
+</body>
+</html>
