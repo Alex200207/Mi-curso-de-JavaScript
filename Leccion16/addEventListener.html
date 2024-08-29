@@ -1,0 +1,55 @@
+<!-- El concepto de addEventListener en JavaScript se refiere a un método que se utiliza para adjuntar
+  una función controladora de eventos a un elemento HTML. Esto permite que el elemento responda a eventos
+   específicos, como clics o pulsaciones de teclas. Al utilizar addEventListener, puedes definir qué acción
+    debe ocurrir cuando se produce un evento en el elemento seleccionado.El concepto de addEventListener en
+     JavaScript se refiere a un método que se utiliza para adjuntar una función controladora de eventos a 
+     un elemento HTML. Esto permite que el elemento responda a eventos específicos, como clics o pulsaciones
+      de teclas. Al utilizar addEventListener,
+  puedes definir qué acción debe ocurrir cuando se produce un evento en el elemento seleccionado. -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListener</title>
+  </head>
+  <body>
+    <h1 id="titulo">Manejo del DOM en JavaScript</h1>
+    Nombre: <input type="text" id="nombre"><br><br>
+    Apellido: <input type="text" id="apellido"><br><br>
+
+    <script>
+        //-ya no se el termino (on) antes de los eventos al usar addEventListener
+        //-asignamos una funcion de tipo callback a un evento llamada cambiar
+        //-evento es el parametro que recibe la funcion cambiar y hace referencia al evento que se dispara
+        //-target hace referencia al elemento que disparo el evento por eso ya no se usa this
+        //-cambiamos el color de fondo del elemento a amarillo
+        
+        
+        document.getElementById('nombre').addEventListener('focus',cambiar);//seleccionamos el elemento con el nombre nombre y le agregamos un evento
+        //para cambiar el color de fondo a amarillo y evento es el parametro que recibe la funcion cambiar y hace referencia al evento que se dispara
+        document.getElementById('nombre').addEventListener('blur',regresar);//
+
+
+        //podemo usar funciones flechas pero no se podra reutilizar la funcion en otro evento  ahi depende la necesidad 
+        //como es una funcion anonima no se podra llamar en otro evento
+        document.getElementById('apellido').addEventListener('focus',(evento)=>{
+            evento.target.style.backgroundColor = 'pink';//cambiamos el color de fondo del elemento a amarillo
+        });
+
+        document.getElementById('apellido').addEventListener('blur',regresar);  
+
+        function cambiar(evento){//creamos la funcion cambiar que recibe un parametro evento
+            let componente = evento.target;//recuperarmos el elemento y target hace referencia al elemento que disparo el evento
+            componente.style.backgroundColor = 'yellow';//cambiamos el color de fondo del elemento a amarillo
+        }
+
+
+        function regresar(evento){//creamos la funcion regresar que recibe un parametro evento
+           let componente = evento.target;//recuperarmos el elemento y target hace referencia al elemento que disparo el evento
+           componente.style.backgroundColor = 'white';//cambiamos el color de fondo del elemento a blanco
+        }
+    </script>
+  </body>
+  </html>
