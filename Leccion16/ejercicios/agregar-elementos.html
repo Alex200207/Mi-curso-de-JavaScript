@@ -27,11 +27,11 @@
         const nuevaTarea = document.createElement("li");
 
         // Asignar contenido de texto al nuevo elemento
-        nuevaTarea.textContent = `Tarea ${listaTareas.children.length + 1}`;
+        nuevaTarea.textContent = `Tarea ${listaTareas.children.length + 1}`;//con children.length obtenemos el numero de elementos hijos de la lista
         //con children.length obtenemos el numero de elementos hijos de la lista 
 
         // Agregar el nuevo <li> a la lista <ul>
-        listaTareas.appendChild(nuevaTarea);
+        listaTareas.appendChild(nuevaTarea);//con appendChild agregamos el nuevo elemento a la lista de tareas
       }
 
       // Asignar un evento al botón para que agregue una tarea al hacer clic

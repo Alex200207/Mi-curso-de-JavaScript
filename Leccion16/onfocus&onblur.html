@@ -1,0 +1,34 @@
+<!-- El evento onfocus se dispara cuando un elemento HTML obtiene el foco, es decir,
+  cuando el usuario selecciona o hace clic en ese elemento. Por otro lado, el evento
+   onblur se dispara cuando un elemento HTML pierde el foco, es decir, cuando el usuario 
+   deja de seleccionar o hacer clic en ese elemento.
+
+Estos eventos son útiles para realizar acciones o validaciones en respuesta a los 
+cambios de foco en los elementos de un formulario, por ejemplo. Puedes utilizarlos 
+para mostrar u ocultar información adicional, validar la entrada del usuario o realizar 
+cualquier otra acción que desees. -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onblur & onfocus</title>
+</head>
+<body>
+    <h1 id="titulo">Esta es una etiqueta</h1><br>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"><br><br>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)" >
+
+    <script>
+        const cambiar = (input) => {
+            input.style.backgroundColor = 'yellow';
+        }
+        const regresar = (input) => {
+            input.style.backgroundColor = 'white';
+            
+        }
+    </script>
+</body>
+</html>
