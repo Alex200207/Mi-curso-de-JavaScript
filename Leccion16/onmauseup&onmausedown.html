@@ -1,0 +1,39 @@
+<!-- El evento onmousedown se activa cuando se presiona un botón del mouse. Puede estar asociado
+    a cualquier elemento HTML, como un botón, una imagen o incluso el documento en sí. Puedes utilizar
+     este evento para realizar acciones inmediatas cuando el usuario hace clic con el botón del mouse. Por ejemplo, puedes cambiar el color de fondo
+    de un elemento cuando se presiona el botón del mouse.
+    
+        El evento "onmouseup" se activa cuando se suelta un botón del mouse después de haber sido presionado en un elemento.
+        Este evento se puede utilizar para realizar ciertas acciones o ejecutar código JavaScript cuando se suelta el botón del mouse.
+-->
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>onmouseup y onmousedown</title>
+        </head>
+        <body>
+            <h1 id="titulo" onmousedown="rojo(this)" onmouseup="azul(this)" onclick="verde(this)">Este es el manejo del DOM</h1>
+
+            <script>
+
+                
+                const rojo = (titulo) => {
+                    console.log('evento onmausedown');
+                    titulo.style.color = 'red';
+                }
+
+                const azul = (titulo) => {
+                    console.log('evento onmouseup');
+                    titulo.style.color = 'blue';
+                }
+                const verde = (titulo) => {
+                    console.log('evento onclick');
+                    titulo.style.color = 'green';
+                }
+
+            </script>
+        </body>
+        </html>
+    
