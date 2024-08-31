@@ -7,49 +7,61 @@
       de teclas. Al utilizar addEventListener,
   puedes definir qué acción debe ocurrir cuando se produce un evento en el elemento seleccionado. -->
 
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AddEventListener</title>
   </head>
   <body>
-    <h1 id="titulo">Manejo del DOM en JavaScript</h1>
-    Nombre: <input type="text" id="nombre"><br><br>
-    Apellido: <input type="text" id="apellido"><br><br>
+    <form id="forma">
+      <h1 id="titulo">Manejo del DOM en JavaScript</h1>
+      Nombre: <input type="text" id="nombre" /><br /><br />
+      Apellido: <input type="text" id="apellido" /><br /><br />
+    </form>
 
     <script>
-        //-ya no se el termino (on) antes de los eventos al usar addEventListener
-        //-asignamos una funcion de tipo callback a un evento llamada cambiar
-        //-evento es el parametro que recibe la funcion cambiar y hace referencia al evento que se dispara
-        //-target hace referencia al elemento que disparo el evento por eso ya no se usa this
-        //-cambiamos el color de fondo del elemento a amarillo
-        
-        
-        document.getElementById('nombre').addEventListener('focus',cambiar);//seleccionamos el elemento con el nombre nombre y le agregamos un evento
-        //para cambiar el color de fondo a amarillo y evento es el parametro que recibe la funcion cambiar y hace referencia al evento que se dispara
-        document.getElementById('nombre').addEventListener('blur',regresar);//
+
+      //a esto se le conoce como delegacion de eventos o useCapture y se usa para propagar eventos a los elementos hijos
+     const forma = document.getElementById('forma');
+
+      forma.addEventListener('focus', (evento)=>{
+        evento.target.style.backgroundColor = 'yellow';
+      },true);//indicamos que lo que hemos configurado para el formulario se propague a los elementos hijos usando true
+
+      forma.addEventListener('blur', (evento)=>{
+        evento.target.style.backgroundColor = 'white';
+      },true);
 
 
-        //podemo usar funciones flechas pero no se podra reutilizar la funcion en otro evento  ahi depende la necesidad 
-        //como es una funcion anonima no se podra llamar en otro evento
-        document.getElementById('apellido').addEventListener('focus',(evento)=>{
-            evento.target.style.backgroundColor = 'pink';//cambiamos el color de fondo del elemento a amarillo
-        });
+      //-ya no se el termino (on) antes de los eventos al usar addEventListener
+      //-asignamos una funcion de tipo callback a un evento llamada cambiar
+      //-evento es el parametro que recibe la funcion cambiar y hace referencia al evento que se dispara
+      //-target hace referencia al elemento que disparo el evento por eso ya no se usa this
+      //-cambiamos el color de fondo del elemento a amarillo
 
-        document.getElementById('apellido').addEventListener('blur',regresar);  
+      // document.getElementById('nombre').addEventListener('focus',cambiar);//seleccionamos el elemento con el nombre nombre y le agregamos un evento
+      // //para cambiar el color de fondo a amarillo y evento es el parametro que recibe la funcion cambiar y hace referencia al evento que se dispara
+      // document.getElementById('nombre').addEventListener('blur',regresar);//
 
-        function cambiar(evento){//creamos la funcion cambiar que recibe un parametro evento
-            let componente = evento.target;//recuperarmos el elemento y target hace referencia al elemento que disparo el evento
-            componente.style.backgroundColor = 'yellow';//cambiamos el color de fondo del elemento a amarillo
-        }
+      // //podemo usar funciones flechas pero no se podra reutilizar la funcion en otro evento  ahi depende la necesidad
+      // //como es una funcion anonima no se podra llamar en otro evento
+      // document.getElementById('apellido').addEventListener('focus',(evento)=>{
+      //     evento.target.style.backgroundColor = 'pink';//cambiamos el color de fondo del elemento a amarillo
+      // });
 
+      // document.getElementById('apellido').addEventListener('blur',regresar);
 
-        function regresar(evento){//creamos la funcion regresar que recibe un parametro evento
-           let componente = evento.target;//recuperarmos el elemento y target hace referencia al elemento que disparo el evento
-           componente.style.backgroundColor = 'white';//cambiamos el color de fondo del elemento a blanco
-        }
+      // function cambiar(evento){//creamos la funcion cambiar que recibe un parametro evento
+      //     let componente = evento.target;//recuperarmos el elemento y target hace referencia al elemento que disparo el evento
+      //     componente.style.backgroundColor = 'yellow';//cambiamos el color de fondo del elemento a amarillo
+      // }
+
+      // function regresar(evento){//creamos la funcion regresar que recibe un parametro evento
+      //    let componente = evento.target;//recuperarmos el elemento y target hace referencia al elemento que disparo el evento
+      //    componente.style.backgroundColor = 'white';//cambiamos el color de fondo del elemento a blanco
+      // }
     </script>
   </body>
-  </html>
+</html>
