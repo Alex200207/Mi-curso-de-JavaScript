@@ -35,3 +35,12 @@ const multiplicar = () => {
 
     document.getElementById('resultado').innerHTML = `El resultado de la multiplicacion es: ${res}`;
 }
+
+const modulo = () => {
+    let forma = document.getElementById('forma');
+    let n1 = forma['operandoA'];
+    let n2 = forma['operandoB'];
+    let res = Number(n1.value) % Number(n2.value);
+    document.getElementById('resultado').innerHTML = `El resultado del modulo es: ${res}`;
+    
+}
