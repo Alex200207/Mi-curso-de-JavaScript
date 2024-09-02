@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css"/>
+    <title>Listado de Personas</title>
+</head>
+<!-- pasos para crear la lista e personas -->
+
+<body onload="mostrarPersonas()"><!-- cuando carge la pagina mostrara la funcion mostrarPersonas -->
+    <div class="contenedor" id="cabecero"><!-- contendor con id y clase -->
+        <h1>Listado de personas</h1>
+    </div>
+    <div class="contenedor">
+        <div class="elemento">
+            <ul id="personas"><!--  creamos un ul con una id -->
+                <!-- <li>Eddy Talavera</li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="" style="text-align: center;">
+            <button style="cursor: pointer;" onclick="agregarPersonas()">
+                +
+            </button>
+        </div>
+        <form  id="forma">
+            <input type="text" id="nombre" placeholder="nombre">
+            <input type="text" id="apellido" placeholder="apellido">
+        </form>
+    </div>
+    <script src="./js/persona.js"></script><!-- importamos scripts -->
+    <script src="./js//index.js"></script>
+</body>
+</html>

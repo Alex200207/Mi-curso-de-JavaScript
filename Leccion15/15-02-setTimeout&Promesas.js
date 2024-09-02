@@ -1,4 +1,5 @@
 //Funcion setTimeout y promesas en javascript
+//que es setTimeout es una funcion que se ejecuta despues de un tiempo determinado
 
 
 let miPromesa = new Promise((resolve,reject)=>{
