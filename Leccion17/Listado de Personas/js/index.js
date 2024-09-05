@@ -1,6 +1,4 @@
-const personas = [
-  //creamos una arreglo que contiene objetos de tipo persona
-];
+const personas = [];//creamos un arreglo de personas vacio
 
 function mostrarPersonas() {
   //creamos una funcion que muestra las personas

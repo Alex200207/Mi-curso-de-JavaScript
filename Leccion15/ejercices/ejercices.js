@@ -19,3 +19,41 @@ let promise = new Promise((resolve, reject) => {
 promise
     .then((resuelto) => console.log(resuelto)) // Si la promesa se resuelve, imprime el mensaje de éxito
     .catch((error) => console.log(error)); // Si la promesa es rechazada, imprime el mensaje de error
+//----------------------------------------------------------------------------
+
+
+let promise2 = new Promise((resolve,reject) =>{
+    setTimeout(()=>{
+        let validacion = true
+        if(validacion){
+            resolve('la validacion es verdadera')
+        }
+        else{
+            reject('la validacion es falsa')
+        }
+    }, 10000)
+})
+
+
+promise2
+.then((res) => console.log(res))
+.catch((err) => console.log(err))
+
+//----------------------------------------------------------------
+
+
+let promise4 = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        let suma = 5;
+        if(suma > 10){
+            resolve('la suma es mayor a 5')
+        }
+        else{
+            reject('la suma no es mayor a 5')
+        }
+    },1000)
+})
+
+promise4
+.then((resultado)=> console.log(resultado))
+.catch((error)=> console.log(error))
