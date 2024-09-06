@@ -8,7 +8,7 @@ const mostrarReloj = () => {
   hr = hr ? hr : 12; //usamos un ternario para que si hr es 0, tome el valor de 12
   //y listoo
 
-  let ampm = hr >= 12 ? "pm" : "am";
+  let ampm = hr >= 12 ? "am" : "pm";
 
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 const dias = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
