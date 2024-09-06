@@ -127,3 +127,30 @@ const eliminarEgreso = (id) => {
     cargarCabecero();//volvemos a cargar el cabecero
     cargarEgresos();//volvemos a cargar los egresos
 }
+
+//agregar Datos
+
+let agregarDatos = () => {
+
+    //recuperamos los datos ingresados en el formulario
+    let forma = document.forms['forma'];//obtenemos el formulario con el nombre forma
+    let tipo = forma['tipo'];//obtenemos el tipo de dato ingresado
+    let descripcion = forma['descripcion'];//obtenemos la descripcion del dato ingresado
+    let valor = forma['valor'];//obtenemos el valor del dato ingresado
+
+    //validamos que los campos no esten vacios
+    if(descripcion.value !== '' && valor.value !== ''){
+        if(tipo.value === 'ingreso'){//si el tipo de dato es ingreso
+            ingresos.push(new Ingreso(descripcion.value,+valor.value));//agregamos un nuevo ingreso al arreglo de ingresos
+            //el signo de + antes de valor.value es para convertir el valor a un numero
+            cargarCabecero();//volvemos a cargar el cabecero
+            cargarIngresos();//volvemos a cargar los ingresos
+        }else if(tipo.value === 'egreso'){//si el tipo de dato es egreso
+            egresos.push(new Egreso(descripcion.value,+valor.value));//agregamos un nuevo egreso al arreglo de egresos
+            cargarCabecero();//volvemos a cargar el cabecero
+            cargarEgresos();//volvemos a cargar los egresos
+        }
+    }
+
+
+}
