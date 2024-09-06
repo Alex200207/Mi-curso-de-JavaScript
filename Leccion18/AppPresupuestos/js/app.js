@@ -8,6 +8,7 @@ const egresos = [
 let cargarApp = () => {
   cargarCabecero();//llamamos a la funcion cargarCabecero
     cargarIngresos();//llamamos a la funcion cargarIngresos
+    cargarEgresos();//llamamos a la funcion cargarEgresos
 };
 
 
@@ -75,11 +76,47 @@ const crearIngresoHTML = (ingreso) =>{//definimos una funcion crearIngresoHTML q
                     <div class="derecha limpiarEstilos">
                         <div class="elemento_valor">+ ${formatoMoneda(ingreso.valor)}</div>
                         <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
-                                <ion-icon name="close-circle-outline"></ion-icon>
+                            <button class="elemento_eliminar--btn" >
+                                <ion-icon name="close-circle-outline" onclick='eliminarIngreso(${ingreso.id})'></ion-icon>
                             </button>
                         </div>
                     </div>
                 </div>`;//creamos una variable ingresoHTML que va a almacenar el html de un ingreso
                 return ingresoHTML;//retornamos el html del ingreso
+}
+
+const eliminarIngreso = (id) => {//definimos una funcion eliminarIngreso que recibe un id
+    let indiceEliminar = ingresos.findIndex(ingreso => ingreso.id === id);//buscamos el indice del ingreso que queremos eliminar con el metodo findIndex que recibe una funcion de callback
+    ingresos.splice(indiceEliminar,1);//eliminamos el ingreso con el metodo splice que recibe el indice del ingreso que queremos eliminar y el numero de elementos que queremos eliminar
+//el 1 indica que solo queremos eliminar un elemento 
+cargarCabecero();//volvemos a cargar el cabecero
+cargarIngresos();//volvemos a cargar los ingresos
+
+} //iteramos el arreglo de ingresos y por cada uno de los ingresos vamos a comparar si el id del ingreso es igual al id que estamos recibiendo
+//si es igual retornamos el indice del ingreso que queremos eliminar 
+//splice es un metodo que nos permite eliminar elementos de un arreglo y recibe el indice del elemento que queremos eliminar y el numero de elementos que queremos eliminar
+
+const cargarEgresos = () => {
+    let egresosHTML = '';
+    for(egreso of egresos){
+        egresosHTML += crearEgresoHTML(egreso);
+
+    }
+    document.getElementById('lista-egresos').innerHTML = egresosHTML;
+}
+
+const crearEgresoHTML = (egreso) => {
+    let egresoHTML = `<div class="elemento limpiarEstilos">
+                    <div class="elemento_descripcion">${egreso.descripcion}</div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="elemento_valor">- ${formatoMoneda(egreso.valor)}</div>
+                        <div class="elemento_porcentaje">${formatoPorcentaje(egreso.valor/totalEgresos())}</div>
+                        <div class="elemento_eliminar">
+                            <button class="elemento_eliminar--btn">
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+                return egresoHTML;
 }

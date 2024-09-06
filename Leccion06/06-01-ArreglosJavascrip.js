@@ -1,5 +1,6 @@
 //arreglos en java scrip es un tipo objet que permite almacenar varios valores se puede declarar de diferentes formas
-
+// los arreglos son mutables o inmutables respuesta inmutable ya que se pueden modificar los valores de los elementos de un arreglo 
+//pero no se puede cambiar la referencia a la memoria del arreglo
 /*let autos = new Array('BMW',"Mercedes Benz",'Volvo');//forma clasica ya no es recomendad
 console.log(autos)*/
 
