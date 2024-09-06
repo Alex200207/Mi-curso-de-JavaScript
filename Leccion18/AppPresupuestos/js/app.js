@@ -112,11 +112,18 @@ const crearEgresoHTML = (egreso) => {
                         <div class="elemento_valor">- ${formatoMoneda(egreso.valor)}</div>
                         <div class="elemento_porcentaje">${formatoPorcentaje(egreso.valor/totalEgresos())}</div>
                         <div class="elemento_eliminar">
-                            <button class="elemento_eliminar--btn">
+                            <button class="elemento_eliminar--btn" onclick='eliminarEgreso(${egreso.id})'>
                                 <ion-icon name="close-circle-outline"></ion-icon>
                             </button>
                         </div>
                     </div>
                 </div>`;
                 return egresoHTML;
+}
+
+const eliminarEgreso = (id) => {
+    let indiceEliminar = egresos.findIndex(egreso=> egreso.id === id);//usamos el metodo findIndex para buscar el indice del egreso que queremos eliminar
+    egresos.splice(indiceEliminar,1);//usamos el metodo splice para eliminar el egreso que queremos eliminar 
+    cargarCabecero();//volvemos a cargar el cabecero
+    cargarEgresos();//volvemos a cargar los egresos
 }
