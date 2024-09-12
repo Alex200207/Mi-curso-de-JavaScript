@@ -11,7 +11,7 @@ let person ={
 console.log(person.name + ', ' + person.lastName)
 
 //utilizando for in
-for(nameProps in person){
+for(nameProps in person){//
     console.log(nameProps)
     console.log(person[nameProps])
 }

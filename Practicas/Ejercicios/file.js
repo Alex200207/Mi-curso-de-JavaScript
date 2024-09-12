@@ -61,3 +61,72 @@ const calculadora = (n1,n2,op) => {
 console.log(calculadora())
 
 //--------------------------------------------------------------------------------------------
+
+//sucesion de fibonacci
+
+//formula de fibonacci: f(n) = f(n-1) + f(n-2)
+
+/*Descripción: Escribe una función que genere los primeros n números de la sucesión de Fibonacci.*/
+
+const fibonacci = (n) => {//n es el numero de elementos de la sucesion que va a generar
+
+    let fib = [0,1];//inicializamos el array con los dos primeros elementos de la sucesion
+    
+    for(let i =2; i< n;i++){//iteramos desde el tercer elemento hasta el n
+        fib[i] = fib[i-1] + fib[i-2];//calculamos el siguiente elemento de la sucesion
+        //explicacion de la sintaxis: fib[i] es el elemento actual que estamos calculando
+        //fib[i-1] es el elemento anterior
+        //fib[i-2] es el elemento dos posiciones atras
+
+        //como funciona cada iteracion
+        //i = 2
+        //fib[2] = fib[1] + fib[0] = 1 + 0 = 1
+        //i = 3
+        //fib[3] = fib[2] + fib[1] = 1 + 1 = 2
+        //i = 4
+        //fib[4] = fib[3] + fib[2] = 2 + 1 = 3
+        //y asi sucesivamente
+    }
+    return fib
+}
+
+console.log(fibonacci(10))
+//----------------------------------------------------------------
+
+//algo de recursividad 
+//recursividad: es una tecnica de programacion que consiste en una funcion se llame a si misma
+
+//una funcion que se llama asi misma una y otra ves hasta q se cumpla
+//una condicion de salida
+
+// const contadorRegresivo = (n) => {
+
+//     if(n < 0) return
+//     console.log(n)
+//     return contadorRegresivo(n-1)
+// }
+
+// contadorRegresivo(10)
+
+//reintentar los llamados a una api hasta 5  veces 
+
+const axios = require('axios')
+
+const llamarApi = async (url , llamados = 0) => {
+    try{
+        const {data} = await axios.get(url)
+        console.log(data)
+        return data
+    }
+    catch(err){
+        if(llamados > 5){
+            return
+
+        }
+        console.log(err)
+        return llamarApi(url, llamados + 1)
+
+    }
+}
+
+llamarApi('https://jsonplaceholder.typicode.com/users')

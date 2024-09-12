@@ -20,7 +20,6 @@ function agregarPersonas() {
   if (nombre.value != "" && apellido.value != "") {
     //si los inputs no estan vacios
     const persona = new Persona(nombre.value, apellido.value); //creamos un objeto de tipo persona con los valores de los inputs
-    console.log(persona);
     personas.push(persona); //agregamos la persona al arreglo de personas
     mostrarPersonas(); //mostramos las personas
   }

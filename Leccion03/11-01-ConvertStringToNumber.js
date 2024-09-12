@@ -1,7 +1,7 @@
 //convertir un strign a numero
 //NaN = not a number es un valor
 
-let minumber = "18r";
+let minumber = "18";
 
 //console.log(typeof minumber)
 

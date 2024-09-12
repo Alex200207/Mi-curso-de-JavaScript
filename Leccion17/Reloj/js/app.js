@@ -4,7 +4,7 @@ const mostrarReloj = () => {
   let min = formatoHora(fecha.getMinutes());
   let seg = formatoHora(fecha.getSeconds());
   //formatp 12 horas
-  hr = hr % 12; // dividimos hr entre 12 y nos quedamos con el residuo
+  hr = hr % 12; // dividimos hr entre 12 y nos quedamos con el residuo si es 0 es medianoche 
   hr = hr ? hr : 12; //usamos un ternario para que si hr es 0, tome el valor de 12
   //y listoo
 
