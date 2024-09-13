@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Juego de adivinanza de números
+
+const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+//math.floor redondea el número hacia abajo
+//math.random genera un número aleatorio entre 0 y 1
+//math.random * 100 multiplica el número aleatorio por 100
+// + 1 le suma 1 al número aleatorio
+
+let intento = null;
+
+while (intento !== numeroSecreto) {
+  intento = parseInt(prompt("adivina el numero secreto del (1 al 100)"));
+
+  if (intento < numeroSecreto) {
+    alert("El número secreto es mayor");
+  } else if (intento > numeroSecreto) {
+    alert("El número secreto es menor");
+  } else if (intento === numeroSecreto) {
+    alert("Adivinaste el número secreto");
+  } else {
+    alert("Ingresa un número válido (1 al 100)");
+  }
+}
+
+    </script>
+</body>
+</html>
