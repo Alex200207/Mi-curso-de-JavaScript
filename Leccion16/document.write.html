@@ -16,6 +16,7 @@
    <button onclick="mostrar()">Mostrar</button>
    <button onclick="sumar(5,8)">Sumar</button>
    <button onclick="modificar()">modificar</button>
+   <button onclick="escribir()">escribir</button>
      <script>
         document.write('<h1>Este es un encabezado</h1>');//escribimos un encabezado en el documento 
         //vaciando informacion directamente en el flujo del documento html.
@@ -26,6 +27,9 @@
 
         const sumar = (a,b) => {
             document.write(`<p>la suma de ${a} mas ${b} es: ${a + b}</p>`);//escribimos la suma de dos numeros
+        }
+        const escribir = () => {
+            document.write('<p>Este es un parrafo</p>');//escribimos un parrafo en el documento
         }
 
         //modificar el contenido de un elemento

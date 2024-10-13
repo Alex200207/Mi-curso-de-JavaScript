@@ -9,12 +9,18 @@
  <body>
     <h1 id="titulo">Manejo del dom con javascript</h1>
     <button onclick="show()">Mostrar</button>
+    <button onclick="mostrar()">imagen</button>
     <br/>
     <img src="http://globalmentoring.com.mx/imagenes/javascript.png" alt="" id="imagen">
+    <img src="" alt="" id="lq">
     <script>
         const show = () =>{
             document.getElementById('imagen').src = 'http://globalmentoring.com.mx/imagenes/html5.png';//cambiamos la imagen por otra imagen
             //usamos el metodo src para cambiar la imagen
+        }
+
+        const mostrar = () => {
+            document.getElementById('lq').src = 'https://th.bing.com/th/id/R.cd27ae551a1321b64f4bce94bf38090b?rik=AQiBT4hT9Y%2bVzw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-ewi88Bxx-_0%2fVZ2M0JfJWRI%2fAAAAAAAABmI%2fQwGr5hRS7yo%2fs1600%2fSiete-beneficios-de-comer-banano-en-tu-dieta-diaria%2525E2%252580%2525A6.jpg&ehk=mTSTIxXsxXB88L0J%2bxR69YA6RerkU8%2fp7Ss%2b1c6uzNs%3d&risl=&pid=ImgRaw&r=0';
         }
     </script>
     

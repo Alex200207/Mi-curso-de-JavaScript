@@ -39,3 +39,21 @@ function myResta(a,b){
 let resultado =(myResta(5,2))
 console.log(resultado)
 //--------------------------------------------------------------------------------------------------------------
+
+//formula de la succesion de fibonacci
+//fibonacci es una serie de numeros que comienza con 0 y 1 y luego cada numero es la suma de los dos anteriores
+//formula 
+//fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
+
+
+
+const myfunFibonacci = (n) => {
+    const fib = [0,1]
+    for(let i = 2; i < n; i++)
+    {
+        fib[i] = fib[i-1] + fib[i-2]
+    }
+    return fib
+} 
+
+console.log(myfunFibonacci(5))

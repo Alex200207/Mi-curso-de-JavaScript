@@ -23,6 +23,7 @@ Cuando el usuario interactúa con un elemento de formulario y cambia su valor, e
     <br>
     Nombre: <input type="text" name=""  onchange="convertir(this)"/>
     Apellido : <input type="text" onchange="convertir2(this)" >
+    saludo: <input type="text" onchange="convertir3(this)">
     <script>
         const convertir = (nombreInput) => {//creamos la funcion convertir que recibe un parametro nombreInput
             nombreInput.value = nombreInput.value.toUpperCase();//convertimos el contenido del input a mayusculas
@@ -30,6 +31,11 @@ Cuando el usuario interactúa con un elemento de formulario y cambia su valor, e
 
         const convertir2 = (apellidoInput) =>{
             apellidoInput.value = apellidoInput.value.toUpperCase();//convertimos el contenido del input a mayusculas
+        }
+
+        const convertir3 = (saludo) => {
+            saludo.value = saludo.value.toUpperCase();
+            saludo.style.backgroundColor = 'yellow';
         }
     </script>
   </body>

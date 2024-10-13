@@ -10,9 +10,11 @@ escritura y comprensión del código. */
 
 //async/await
 
-async function funcionConPromesa() {//funcion debe regresar una promesa
+async function funcionConPromesa() {
+  //funcion debe regresar una promesa
   //funcion asincrona
-  let miPromesa = new Promise((resolve) => {//procesamos la promesa dentro del funcion
+  let miPromesa = new Promise((resolve) => {
+    //procesamos la promesa dentro del funcion
     resolve("Promesa con await");
   });
 
@@ -23,42 +25,48 @@ async function funcionConPromesa() {//funcion debe regresar una promesa
 //con await se recive el valor que antes se resivia con el .then().
 /*await solo se puede usar dentro de una funcion declarada con async */
 
-
-
-async function funcionConPromesa2(){
-    let miPromesa2 = new Promise((resolve) => {
-        resolve('promesa cumplida con await')
-    })
-    console.log(await miPromesa2)
+async function funcionConPromesa2() {
+  let miPromesa2 = new Promise((resolve) => {
+    resolve("promesa cumplida con await");
+  });
+  console.log(await miPromesa2);
 }
 
 //ejercicos de practica-----------------------------------------------------------------------------------------------
 // Ejercicio 1: Crea una función asincrónica llamada "obtenerDatos" que reciba un parámetro llamado "url".
- // Dentro de la función, utiliza la función fetch() para hacer una solicitud GET a la URL proporcionada. 
- // Utiliza await para esperar la respuesta de la solicitud y luego convierte la respuesta a formato JSON. 
- // Finalmente, devuelve los datos obtenidos en formato JSON. // Ejemplo: 
- /* async function obtenerDatos(url) { const response = await fetch(url); const data = await response.json(); return data; } */
+// Dentro de la función, utiliza la función fetch() para hacer una solicitud GET a la URL proporcionada.
+// Utiliza await para esperar la respuesta de la solicitud y luego convierte la respuesta a formato JSON.
+// Finalmente, devuelve los datos obtenidos en formato JSON. // Ejemplo:
+/* async function obtenerDatos(url) { const response = await fetch(url); const data = await response.json(); return data; } */
 
-const url = 'https://jsonplaceholder.typicode.com/posts';
+const url = "https://jsonplaceholder.typicode.com/posts";
 
 async function obtenerDatos(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-    return data;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 }
 
-
-
-
 // Ejercicio 2: Crea una función asincrónica llamada "obtenerUsuarios" que utilice la función "obtenerDatos" creada en el ejercicio anterior.
-// La función "obtenerUsuarios" debe llamar a "obtenerDatos" con la URL de una API que devuelve una lista de usuarios. 
-// Luego, muestra en la consola el nombre de cada usuario obtenido. // Ejemplo: 
+// La función "obtenerUsuarios" debe llamar a "obtenerDatos" con la URL de una API que devuelve una lista de usuarios.
+// Luego, muestra en la consola el nombre de cada usuario obtenido. // Ejemplo:
 /* async function obtenerUsuarios() { const url = 'https://api.example.com/users';
 const data = await obtenerDatos(url); data.forEach(user => { console.log(user.name); }); } */
 
 async function obtenerUsuarios() {
-    const data = await obtenerDatos(url);
-    data.forEach(user => {
-        console.log(user.name);
-    });
+  const data = await obtenerDatos(url);
+  data.forEach((user) => {
+    console.log(user.name);
+  });
 }
+
+//------------------------------------------------------------------------------
+
+async function prueba() {
+  let promseaNueva = new Promise((resolve) => {
+    resolve("promesa nueva");
+  });
+  console.log(await promseaNueva);
+}
+
+prueba();

@@ -25,3 +25,15 @@ let promesa = new Promise((resolve)=>{
 });
 
 promesa.then(valor => console.log(valor))
+
+
+
+let promesa2 = new Promise((resolve,reject)=> {
+    console.log('inicio de la promesa')
+    setTimeout(()=> resolve('saludos con promesa y timeout'),3000)
+    console.log('fin de la promesa')
+})
+
+promesa2
+.then(valor => console.log(valor))
+.catch(err => console.log(err))

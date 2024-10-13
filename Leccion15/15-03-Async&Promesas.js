@@ -26,7 +26,9 @@ con la funcion .then()*/
 
  nueva().then((valor) => console.log(valor))
 
- async function nueva2(){
-    return 'esta es otra prueba de async en funciones'
+
+ async function saludo(){
+      return 'hola como estas'
  }
- nueva().then((valor) => console.log(valor))
+
+ saludo().then((valor) => console.log(valor))

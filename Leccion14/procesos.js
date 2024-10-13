@@ -23,3 +23,11 @@ let reloj = () => {
 
 //usar funcion setInterval
 setInterval(reloj,1000)//se manda a llamar cada segundo
+
+let reloj2 = () => {
+
+  let fecha = new Date();
+  console.log(`${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`)
+}
+
+setInterval(reloj2,2000)//se manda a llamar cada 2 segundos

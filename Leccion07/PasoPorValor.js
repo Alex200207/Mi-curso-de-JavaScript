@@ -44,4 +44,16 @@ console.log(apellido)
 
 //---------------------------------------------------------------------------
 
+let referencia = 10;
+
+
+const cambiarReferencia = (loquesea) => {
+    loquesea += 5;
+    console.log(loquesea)
+    //usamos un operador de asignacion para sumar 5  al valor de loquesea
+    //este valor no se modifica en la variable original
+    //solo dentro de la funcion
+
+}
+cambiarReferencia(referencia)
 

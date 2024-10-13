@@ -114,7 +114,7 @@ const axios = require('axios')
 
 const llamarApi = async (url , llamados = 0) => {
     try{
-        const {data} = await axios.get(url)
+        const {data} = await fetch(url)
         console.log(data)
         return data
     }

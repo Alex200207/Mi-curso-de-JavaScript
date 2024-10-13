@@ -43,3 +43,13 @@ const funcionParametros2 = function(mensaje){
 
 
 console.log(funcionParametros2('hola bro como estas'))
+
+
+
+const presentacion = (nombre) =>  nombre;
+
+const saludar2 = (callback, nombre) => {
+    return callback(`hola mi nombre es ${nombre}`);
+}
+
+console.log(saludar2(presentacion, 'eddy')); //pasamos la referenica de las funciones

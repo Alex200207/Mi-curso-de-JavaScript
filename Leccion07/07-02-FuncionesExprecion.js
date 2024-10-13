@@ -23,3 +23,16 @@ let p = function(m,k){return m / k}
 divicion= p(8,2)
 console.log(divicion)
 //----------------------------------------------------------------
+
+let x1 = function(n)
+{
+    const fib= [0,1]
+    console.log(arguments.length)
+    for(let i = 2; i < n; i++)
+    {
+        fib[i] = fib[i-1] + fib[i-2]
+    }
+    return fib
+}
+
+console.log(x1(5))

@@ -44,3 +44,22 @@ const cambiarValoresAuto = (p1) => {
 
 cambiarValoresAuto(auto)
 console.log(auto)
+
+
+
+
+const referencia = {
+    nombre: 'crack',
+    apellido: 'talavera'
+}
+
+
+const cambiamosValores = (loquesea) => {
+
+    loquesea.nombre ='otra cosa'
+    loquesea.apellido = 'otra cosa'
+    //usa punto para acceder a los atributos del objeto 
+}
+
+cambiamosValores(referencia)
+console.log(referencia)

@@ -32,3 +32,14 @@ let persona2 = new Persona('carlos','talavera')
 console.log(persona2)
 
 //------------------------------------------------------------------------------------
+
+class Animal {
+    constructor(especie,edad,color){
+        this.especie = especie
+        this.edad = edad
+        this.color = color
+    }
+}
+
+let animal1 = new Animal('perro',5,'cafe')
+console.log(animal1)

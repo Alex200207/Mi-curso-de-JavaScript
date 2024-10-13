@@ -31,3 +31,6 @@ console.log(persona1.nombre)//get nombre
 //pero es una buena practica...
 
 //------------------------------------------------------------------------------------
+
+let persona2 = new Persona('carlos','talavera')
+console.log(persona2.nombre)

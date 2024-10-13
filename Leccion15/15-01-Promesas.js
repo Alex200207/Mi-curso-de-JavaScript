@@ -87,3 +87,17 @@ Promise.all([promesa1, promesa2])
 // Utiliza Promise.all para esperar a que ambas se completen antes de proceder.
 
 
+promesa3 = new Promise((resolve, reject)=> {
+    let validacion = true;
+    setTimeout(() => {
+        if(validacion){
+            resolve("promesa 3 resuelta")
+        }
+        else{
+            reject("promesa 3 rechazada")
+        }
+    }, 5000)
+})
+promesa3
+.then(resultado => console.log(resultado))
+.catch(error => console.log(error))

@@ -464,3 +464,32 @@ function potenciar(poten) {
 }
 
 //---------------------------------------------------------------
+
+//calcular el radio de un circulo
+
+const radio = (r) => {
+  return Math.PI * Math.pow(r,2)
+}
+
+console.log(radio(5));
+
+//contador de palabras en una cadena
+
+const contador = (cadena) => {
+  return cadena.trim().split(" ").length;
+}
+
+console.log(contador("hola mundo"));
+
+//devolver los numero mayores que
+
+const mayores = (numero,valor)=>{
+  for(let i = 0; i < numero.length; i++){
+    if(numero[i] > valor){
+      console.log(numero[i]);
+    }
+    return numero[i];
+  }
+}
+
+console.log(mayores([1,2,3,4,5],3));

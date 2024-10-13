@@ -59,3 +59,13 @@ const Nombre = (nombre) => {
 console.log(Nombre())
 
 //------------------------------------------------------------
+
+const fibo = (n) => {
+  const fib = [5,10];
+  for(let i = 2; i < n; i++)
+  {
+    fib[i] = fib[i-2] + fib[i-1];
+  }
+  return fib
+}
+console.log(fibo(5))
