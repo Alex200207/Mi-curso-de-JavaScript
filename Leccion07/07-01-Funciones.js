@@ -57,3 +57,16 @@ const myfunFibonacci = (n) => {
 } 
 
 console.log(myfunFibonacci(5))
+
+
+
+const fib2 = (n) => {
+    const fib = [0,1]
+    for(let o = 2; i < n ; i++){
+        fib[o] = fib[o-1] + fib[o-2]
+
+    }
+    return fib
+}
+
+console.log(fib2(5))

@@ -43,3 +43,6 @@ class Animal {
 
 let animal1 = new Animal('perro',5,'cafe')
 console.log(animal1)
+
+//un constructor es un metodo especial que se llama automaticamente cuando se crea un objeto de una clase
+//se utiliza para inicializar los atributos de la clase

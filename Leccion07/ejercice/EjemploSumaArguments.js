@@ -12,7 +12,7 @@ function sumarTodo(){//crear una funcion
     //la condicion es iterar desde la variable i hasta argument.length es decir recorrer todos los elementos que tiene nuestro arreglo de argumentos
     {
         suma += arguments[i];//suma = suma + arguments
-        console.log(arguments[i])//viendo los argumentos
+        console.log(suma)//viendo los argumentos
     }
     return suma//retornamos el valor de la variable suma 
 }
@@ -85,3 +85,29 @@ function sumarAll(){
     }
     return sumar
 }
+
+//susecion de fibonacci
+
+const nums = [0,1]
+
+const fibonacci = (n) => {
+    for(let i = 2; i < n; i++){
+        nums[i] = nums[i-1] + nums[i-2]
+    }
+    return nums
+}
+
+fibonacci(5)
+console.log(nums)
+
+
+const nums2 = [0,1]
+
+const fibonacci2 = (n) => {
+    for(let i = 2; i < n; i++){
+        nums2[i] = nums2[i-1] + nums2[i-2]
+    }
+    return nums2
+}
+
+fibonacci2(10)

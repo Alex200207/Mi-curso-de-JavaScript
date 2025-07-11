@@ -1,13 +1,15 @@
 //convertir un strign a numero
 //NaN = not a number es un valor
 
+const { response } = require("express");
+
 let minumber = "18";
 
 //console.log(typeof minumber)
 
 let edad = Number(minumber); //Number() Permite convertir un string a numero
 //console.log(typeof edad)
-console.log(edad);//NaN
+console.log(edad); //NaN
 
 //----------------------------------------------------------------------------
 //NaN = not a number es un valor
@@ -44,3 +46,14 @@ if (isNaN(edad)) {
   console.log(test);
 }
 //-------------------------------------------------------------------
+
+const validation = (number) => {
+  if (isNaN(number)) {
+    return "no es numero";
+  } else {
+    return " numero";
+  }
+};
+
+response5 = validation();
+console.log(response5);

@@ -7,3 +7,6 @@ console.log(nombre);
 var saludo = "Hola Mundo";
 console.log(saludo);
 
+var h = 'hola mundo'
+
+console.log(h)

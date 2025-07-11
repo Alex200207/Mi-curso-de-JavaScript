@@ -31,3 +31,10 @@ resultado = result2 % 2 == 0 ? "verdadero" : "falso";
 console.log(resultado);
 
 
+///ejercicio de ternarios 
+//1.- si la variable es mayor a 10 entonces es mayor de 10
+const variable = 10;
+
+const resultado3 = variable > 10 ? "mayor de 10" : "menor de 10";
+console.log(resultado3);
+

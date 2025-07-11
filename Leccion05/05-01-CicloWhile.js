@@ -31,9 +31,17 @@ console.log("fin de esta vaina")
 //ciclo while infinitp
 
 
-let contador3 = 0
+// let contador3 = 0
 
-while(contador >= 0){
-  console.log(contador)
-  contador++;
+// while(contador >= 0){
+//   console.log(contador)
+//   contador++;
+// }
+
+
+let contador4 = 6
+
+while(contador4 <= 20){
+  console.log(contador4)
+  contador4++;
 }

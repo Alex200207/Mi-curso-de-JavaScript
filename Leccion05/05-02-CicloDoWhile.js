@@ -2,7 +2,7 @@
 
 let contador = 0;
 
-do {
+do {//haz esto mientras la condicion sea verdadera
   console.log(contador);//primero se imprime el contador si evaluar la condicion ya que en do while se ejecuta el codigo almenos una ves
   //while evalua la condicion despues del bloque de codigo eso hace que almenos una ves se ejecute
   contador++;//post-incremento

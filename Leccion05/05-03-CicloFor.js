@@ -9,17 +9,17 @@ for (
 }
 console.log("fin del ciclo for");
 
-
 //my practice ----------------------------------------------------------
 
-for(let numeros = 0 ;numeros < 5;numeros++){
-    console.log(numeros)
+for (let numeros = 0; numeros < 5; numeros++) {
+  console.log(numeros);
 }
-console.log('fin de este ciclo')
+console.log("fin de este ciclo");
 //-----------------------------------------------------------------------
 
 //ciclo for infinito
 
-for (let contador = 0; contador >= 0; contador++) {
-  console.log(`Bucle infinito: ${contador}`);
-}
+// for (let contador = 0; contador >= 0; contador++) {
+//   console.log(`Bucle infinito: ${contador}`);
+// }
+

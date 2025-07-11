@@ -40,3 +40,39 @@ Las pilas siguen el principio de "último en entrar, primero en salir" (LIFO), m
 Las excepciones son eventos que ocurren durante la ejecución de un programa y que pueden interrumpir su flujo normal. 
 El manejo de excepciones permite al programa reaccionar de manera controlada ante errores o situaciones inesperadas.
 """*/
+
+const fun = (array) => {
+    const count = [];
+    for (let i = 0; i < array.length; i++) {
+        count.push(array[i] * 2);//multiplicamos cada elemento del array por 2 y lo agregamos al array count
+    }
+    return count;
+};
+
+console.log(fun([1, 2, 3]));
+
+
+//area de un cierculo formula PI*r^2
+const radioCirculo = (r) => {
+
+    return Math.PI * Math.pow(r, 2);//
+
+}
+
+console.log(radioCirculo(5));
+
+//area de un triangulo formula b*h/2
+
+const areaTriangulo = (b, h) => {
+    
+        return b * h / 2;
+    
+    }
+
+console.log(areaTriangulo(5, 3));
+
+
+
+
+
+

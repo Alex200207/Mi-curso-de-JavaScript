@@ -16,3 +16,5 @@ console.log(numero);
 
 var sym = Symbol('foo');
 
+var nombre3 = 'Eddy'
+console.log(nombre3);

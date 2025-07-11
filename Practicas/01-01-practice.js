@@ -407,7 +407,9 @@ for (let i = 0; i < array.length; i++) {
 function arreglo2(array) {
   let count = [];
   for (let i = 0; i < array.length; i++) {
-    count.push(array[i] * 2);
+    count.map((e) => {
+      e * 2;
+    })
   }
   return count;
 }
@@ -416,7 +418,7 @@ console.log(arreglo2([1, 2, 3]));
 
 //-------------------------------------
 
-
+//esta funcion recibe un array de numeros y devuelve un nuevo array con los numeros multiplicados por 2
 //codigo a entender
 function multi(arreglo) {
   let contador = [];

@@ -49,7 +49,7 @@ console.log(typeof simbolo);
 //Las clases en javascrip tambien son funciones
 //Tipos clase es una funcion
 class Persona {
-  constructor(nombre, apellido) {
+  constructor(nombre, apellido) {//el atributo sera igual al parametro
     this.nombre = nombre; //this permite hacer referncia a los atributos de la clase
     this.apellido = apellido;
   }
